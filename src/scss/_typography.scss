@@ -1,0 +1,27 @@
+.t1, .t2, .t3, .t4, .t5, .t6 {
+  font-family: $headings-font-family;
+  font-weight: $font-weight-normal;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+.r1, .r2, .r3, .r4, .r5, .r6 {
+  font-family: $headings-font-family;
+  font-weight: $font-weight-normal;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1, .h1, .t1 { font-size: $h1-font-size;line-height: 28px; }
+h2, .h2, .t2 { font-size: $h2-font-size;line-height: 24px; }
+h3, .h3, .t3 { font-size: $h3-font-size;line-height: 28px; }
+h4, .h4, .t4 { font-size: $h4-font-size;line-height: 20px; }
+h5, .h5, .t5 { font-size: $h5-font-size;line-height: 18px; }
+h6, .h6, .t6 { font-size: $h6-font-size;line-height: 16px; }
+
+.r1 { font-size: $h1-font-size;line-height: 32px; }
+.r2 { font-size: $h2-font-size;line-height: 30px; }
+.r3 { font-size: $h3-font-size;line-height: 28px; }
+.r4 { font-size: $h4-font-size;line-height: 26px; }
+.r5 { font-size: $h5-font-size;line-height: 24px; }
+.r6 { font-size: $h6-font-size;line-height: 22px; }

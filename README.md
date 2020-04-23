@@ -1,24 +1,9 @@
-# vuecli-eslint-template
+# vue-cli-template
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Vue-Cli 模板
+1. vuex
+2. vue-router
+3. vue-axios-instance
+4. eslint-prettier
+5. svg-sprite-loader
+6. BootstrapVue
