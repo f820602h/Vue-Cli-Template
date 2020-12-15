@@ -1,6 +1,9 @@
 import Vue from "vue";
+import store from "@/store";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+
+import pipelineMiddleware from "@/middleware/pipeline";
 
 Vue.use(VueRouter);
 
@@ -22,7 +25,24 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  }
+});
+
+router.beforeEach((to, from, next) => {
+  if (!to.meta.middleware) {
+    return next();
+  }
+
+  const middleware = to.meta.middleware;
+  const context = { to, from, next, store };
+
+  return middleware[0]({
+    ...context,
+    next: pipelineMiddleware(context, middleware, 1)
+  });
 });
 
 export default router;

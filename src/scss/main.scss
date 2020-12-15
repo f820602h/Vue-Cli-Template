@@ -1,8 +1,10 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
+// before custom bootstrap.
+@import "./variables.scss";
 
-@import "./customVars";
-@import "./typography";
+// bootstrap
+@import "./bootstrap/bootstrap";
 
-@import '../../node_modules/bootstrap/scss/bootstrap';
-@import '../../node_modules/bootstrap-vue/src/index.scss';
+// custom utilities
+@import "./custom/utilities/type";
+@import "./custom/utilities/link";
+@import "./custom/utilities/buttons";

@@ -9,9 +9,7 @@ const addPending = config => {
   config.cancelToken =
     config.cancelToken ||
     new axios.CancelToken(cancel => {
-      if (!pending.has(url)) {
-        pending.set(url, cancel);
-      }
+      if (!pending.has(url)) pending.set(url, cancel);
     });
 };
 
@@ -52,9 +50,7 @@ const errorHandle = (status, message) => {
 // axios 的實例
 const instance = axios.create({
   baseURL: "apiUrl",
-  headers: {
-    "Content-Type": "application/json"
-  },
+  headers: { "Content-Type": "application/json" },
   paramsSerializer: params => Qs.stringify(params, { arrayFormat: "repeat" }),
   withCredentials: true,
   crossDomain: true,
@@ -68,9 +64,7 @@ instance.interceptors.request.use(
     addPending(config);
     return config;
   },
-  error => {
-    return Promise.reject(error);
-  }
+  error => Promise.reject(error)
 );
 
 // response 攔截器

@@ -9,11 +9,15 @@
 </template>
 
 <style lang="scss">
+html,
+body {
+  position: relative;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: $gray-900 !important;
+}
+
 #app {
-  font-family: Arial, "微軟正黑體", "Microsoft JhengHei", Roboto, "PingFangTC",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
