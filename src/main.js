@@ -2,7 +2,6 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import BootstrapVue from "bootstrap-vue";
 import "@/scss/main.scss";
 
 import Icon from "@/components/Icon";
@@ -15,8 +14,6 @@ const req = require.context("./assets/icon", true, /\.svg$/);
 requireAll(req);
 
 Vue.component("icon", Icon);
-
-Vue.use(BootstrapVue);
 
 new Vue({
   router,
